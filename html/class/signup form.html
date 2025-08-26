@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+</head>
+<body>
+    <form action="/signup" method="post">
+        <!-- form elements go here -->
+        <label for="first name">First name:</label>
+        <input type="text" id="first" name="username" placeholder="Enter in lower case">
+        <label for="last name">Last  name:</label>
+        <input type="text" id="first" name="username" placeholder="Enter in lower case">
+        <br>
+        <label for="number">age:</label>
+        <input type="number"  placeholder="enter your age"min ="10" max="100"required>
+        <label for="email">Email:</label>
+        <input type="email" name="user_email" placeholder="Enter email" required>
+        <br>
+        <label for="gender">gender:</label>
+        <input type="radio" name = "gender">male
+        <input type="radio" name = "gender">female
+        <br>
+        <label for="drop">drop:</label>
+        <input type="drop" name="drop" placeholder="upload file">
+        <button type="submit">Submit</button>        
+        
+       
+    </form>
+    
+</body>
+</html>
