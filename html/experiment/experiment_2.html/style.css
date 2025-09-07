@@ -1,0 +1,257 @@
+:root {
+  --text: #333333;
+  --bg: #f9f9f9;
+  --card: #ffffff;
+  --line: #e5e7eb;
+  --header-text: #ffffff;
+  --brand: #0f172a;
+  --accent: #ff6f61; /* Main accent color */
+  --secondary: #4caf50; /* Secondary accent color */
+  --highlight: #ffbb33; /* Highlight color */
+  --header-gradient: linear-gradient(to right, #ff6f61, #ffbb33); /* Gradient for header */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 0.6rem;
+  color: var(--text);
+}
+
+p {
+  margin: 0.4rem 0 1rem;
+  color: var(--text);
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+#about-header {
+  position: relative;
+  padding: 96px 24px 120px;
+  text-align: center;
+  color: var(--header-text);
+  background: var(--header-gradient);
+  overflow: hidden;
+}
+
+#about-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 48px;
+  width: 140px;
+  height: 3px;
+  background: var(--header-text);
+  border-radius: 999px;
+}
+
+#about-header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: var(--header-text);
+}
+
+#about-header p {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  color: var(--header-text);
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+}
+
+.section {
+  margin: 28px 0 40px;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--brand);
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.lead::first-letter {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  float: left;
+  margin: 0.1rem 0.5rem 0 0;
+  color: var(--brand);
+}
+
+a[target="_blank"] {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+  font-weight: 600;
+}
+
+a[target="_blank"]:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+ul.values {
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 0;
+}
+
+ul.values li {
+  margin: 0.1rem 0 0.35rem;
+  color: var(--text);
+}
+
+ul.values li::marker {
+  color: var(--accent);
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.member {
+  position: relative;
+  padding: 26px 22px 22px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 10px;
+}
+
+.member h3 {
+  color: var(--brand);
+}
+
+.member small {
+  color: var(--secondary);
+}
+
+.member p {
+  color: var(--text);
+}
+
+blockquote {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 22px 24px 24px;
+  border-radius: 14px;
+  color: var(--text);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.cta h3, .cta p, .cta .btn {
+  color: var(--text);
+}
+
+footer {
+  padding: 26px;
+  text-align: center;
+  color: var(--text);
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  #about-header {
+    padding: 64px 16px 80px;
+  }
+
+  #about-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
