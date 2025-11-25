@@ -5,10 +5,10 @@
   --line: #e5e7eb;
   --header-text: #ffffff;
   --brand: #0f172a;
-  --accent: #ff6f61; /* Main accent color */
-  --secondary: #4caf50; /* Secondary accent color */
-  --highlight: #ffbb33; /* Highlight color */
-  --header-gradient: linear-gradient(to right, #ff6f61, #ffbb33); /* Gradient for header */
+  --accent: #ff6f61; 
+  --secondary: #4caf50;
+  --highlight: #ffbb33;
+  --header-gradient: linear-gradient(to right, #ff6f61, #ffbb33);
 }
 
 body {
