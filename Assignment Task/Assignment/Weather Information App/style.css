@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#errorMsg {
+    color: red;
+    margin-top: 10px;
+    height: 20px;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    min-height: 80px;
+}

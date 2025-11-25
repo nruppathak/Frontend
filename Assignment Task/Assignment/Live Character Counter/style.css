@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+textarea {
+    width: 320px;
+    height: 120px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#counter {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: green; 
+}
